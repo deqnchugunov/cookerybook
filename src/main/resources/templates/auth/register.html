@@ -14,21 +14,21 @@
         You have been logged out
     </div>
 
-    <h2>Register User</h2>
+    <h2>Sign up new User</h2>
 
     <form action="#" th:action="@{/auth/register}" method="post">
         <label>
             Username:
             <input type="text" name="username"/>
         </label>
-        <div></div>
+        <div>&nbsp;</div>
         <label>
             Password:
             <input type="text" name="password"/>
         </label>
         <div>&nbsp;</div>
 
-        <div><button type="submit">Create</button></div>
+        <div><button type="submit">Sign Up</button> | <a th:href="@{'/'}">Cancel</a></div>
     </form>
 </body>
 </html>

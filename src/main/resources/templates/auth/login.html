@@ -15,19 +15,21 @@
     You have been logged out
 </div>
 
-<h1>Hi! Please, log in.</h1>
+<h2>Please log in.</h2>
 
 <form th:action="@{/login}" method="post">
     <label>
         Username:
         <input type="text" name="username">
     </label>
+    <div>&nbsp;</div>
     <label>
         Password:
         <input type="text" name="password">
     </label>
+    <div>&nbsp;</div>
 
-    <input type="submit" value="Sing in"/>
+    <div><button type="submit">Sign In</button> | <a th:href="@{'/'}">Cancel</a></div>
 </form>
 </body>
 </html>

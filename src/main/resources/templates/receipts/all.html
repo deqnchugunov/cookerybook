@@ -12,10 +12,8 @@
         <span th:text="'Category: '" /><a th:href="@{'/receipts?category=' + ${receipt.category.name}}" th:text="${receipt.category.name}" />
         <hr />
     </div>
-
-    <a href="/receipts/create">add new receipt</a>
-    <div></div>
-    <a href="/">back to home</a>
+    <div>&nbsp;</div>
+    <div><a href="/">back to home</a> | <a href="/receipts/create">add new receipt</a></div>
 
 </body>
 </html>
