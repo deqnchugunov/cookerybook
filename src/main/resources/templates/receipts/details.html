@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Receipt Details</title>
+</head>
+<body>
+
+<h2>Receipt</h2>
+
+<p th:text="${receipt.title}" />
+<p th:text="${receipt.description}" />
+
+<div>&nbsp;</div>
+
+<span th:text="'Category: '" /><a th:href="@{'/receipts?category=' + ${receipt.category.name}}" th:text="${receipt.category.name}" />
+
+<div>&nbsp;</div>
+
+<div><a th:href="@{'/receipts/edit/' + ${receipt.id}}" th:text="edit"></a> | <a th:href="@{'/receipts/delete/' + ${receipt.id}}" th:text="delete"></a></div>
+
+<div>&nbsp;</div>
+
+<a th:href="@{/receipts}">back to receipts</a>
+
+</body>
+</html>

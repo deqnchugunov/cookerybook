@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+<h2>Categories</h2>
+<div th:each="category : ${categories}">
+    <p th:text="${category.name}" />
+    <hr />
+</div>
+<a href="/">back to home</a>
+</body>
+</html>

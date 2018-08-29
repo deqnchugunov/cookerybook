@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Receipts</title>
+</head>
+<body>
+    <h2>Receipts</h2>
+
+    <div th:each="receipt : ${receipts}">
+        <span th:text="'Name: '" /><a th:href="@{'/receipts/' + ${receipt.id}}" th:text="${receipt.title}" />
+        <span th:text="'Category: '" /><a th:href="@{'/receipts?category=' + ${receipt.category.name}}" th:text="${receipt.category.name}" />
+        <hr />
+    </div>
+
+    <a href="/receipts/create">add new receipt</a>
+    <div></div>
+    <a href="/">back to home</a>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Create Receipt</title>
+</head>
+<body>
+<form action="#" th:action="@{/receipts/create}" method="post">
+
+    <h2>Add New Receipt</h2>
+
+    <label>
+        Title:
+        <input type="text" name="title"/>
+    </label>
+    <div></div>
+    <label>
+        Description:
+        <input type="text" name="description"/>
+    </label>
+    <div></div>
+    <label>
+        Category:
+        <select id="category.id" name="category.id">
+            <option value="0">please select</option>
+            <option th:each="category : ${categories}"
+                    th:value="${category.id}"
+                    th:text="${category.name}"></option>
+        </select>
+    </label>
+
+    <div>&nbsp;</div>
+
+    <div><button type="submit">Create</button> | <a href="/receipts">Cancel</a></div>
+
+</form>
+</body>
+</html>

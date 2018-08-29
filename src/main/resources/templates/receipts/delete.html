@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Receipt</title>
+</head>
+<body>
+
+<h2>Delete Receipt</h2>
+
+<h3>Are you sure you want to delete record?</h3>
+
+<p th:text="${receipt.title}"/>
+<p th:text="${receipt.description}"/>
+
+<div>&nbsp;</div>
+
+<span th:text="'Category: '"/><a th:href="@{'/receipts?category=' + ${receipt.category.name}}" th:text="${receipt.category.name}"/>
+
+<div>&nbsp;</div>
+
+<form action="#" th:action="@{/receipts/delete/{id}}" method="post">
+    <input type="hidden" name="id" th:value="${receipt.id}" />
+    <input type="hidden" name="id" th:value="${receipt.title}" />
+    <input type="hidden" name="id" th:value="${receipt.description}" />
+
+    <div><button type="submit">Delete</button> | <a th:href="@{'/receipts/' + ${receipt.id}}">Cancel</a></div>
+
+    <div>&nbsp;</div>
+
+</form>
+
+<a th:href="@{/receipts}">back to receipts</a>
+
+</body>
+</html>
