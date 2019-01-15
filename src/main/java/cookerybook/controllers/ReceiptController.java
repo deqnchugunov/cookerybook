@@ -1,10 +1,14 @@
 package cookerybook.controllers;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import cookerybook.entities.Category;
 import cookerybook.entities.Receipt;
 import cookerybook.services.base.CategoriesService;
 import cookerybook.services.base.ReceiptsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.json.JsonParser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
