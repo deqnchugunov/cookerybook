@@ -13,9 +13,7 @@ public class Receipt implements EntityModel {
     private String description;
     private Category category;
 
-    public Receipt() {
-
-    }
+    public Receipt() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

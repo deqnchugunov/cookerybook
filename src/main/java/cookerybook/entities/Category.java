@@ -12,9 +12,7 @@ public class Category implements EntityModel {
     private String name;
     private Set<Receipt> receipts;
 
-    public Category(){
-
-    }
+    public Category() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

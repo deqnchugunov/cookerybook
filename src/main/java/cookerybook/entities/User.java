@@ -11,6 +11,8 @@ public class User implements EntityModel {
     private String username;
     private String password;
 
+    public User() {}
+
     @Override
     @Column(name = "id")
     @Id
